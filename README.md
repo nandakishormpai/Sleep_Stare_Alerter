@@ -1,5 +1,5 @@
 # Sleep_Stare_Alerter
-An openCV driven project to help users stop sleeping and staring into the screen for too long by alerting them
+An openCV driven project to help users stop sleeping and staring into the screen for too long by alerting them.<br>
 We used the concept of EAR to do this.
 
 CLone this repo and execute the python file alerter.py along with command line arguement for --shape-predictor.<br> As :-
@@ -7,13 +7,13 @@ alerter.py --shape-predictor shape_predictor_face_landmarks.dat
 
 
 <h1>Prerequisites</h1><br>
-opencv<br>
-numpy<br>
-argparse<br>
-imutils<br>
-dlib<br>
-cv2<br>
-pygame<br>
+<b>1.</b>opencv<br>
+<b>2.</b>numpy<br>
+<b>3.</b>argparse<br>
+<b>4.</b>imutils<br>
+<b>5.</b>dlib<br>
+<b>6.</b>cv2<br>
+<b>7.</b>pygame<br>
 
 it would be better if you do all this in a virtual environment.<br>
 
