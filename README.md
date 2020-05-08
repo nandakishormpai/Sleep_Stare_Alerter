@@ -2,7 +2,7 @@
 An openCV driven project to help users stop sleeping and staring into the screen for too long by alerting them.<br>
 We used the concept of EAR to do this.
 
-Clone this repo and execute the python file alerter.py along with command line arguement for --shape-predictor.<br> As :-
+Clone this repo and execute the python file alerter.py along with command line arguement for --shape-predictor.<br> As ::  
 alerter.py --shape-predictor shape_predictor_face_landmarks.dat
 
 
