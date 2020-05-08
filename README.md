@@ -23,7 +23,7 @@ alerter.py --shape-predictor shape_predictor_face_landmarks.dat
 <b><i>Step 3</i></b>: Install Anaconda 3(not necessary)<br><br>
 <b><i>Step 4</i></b>: pip install dlib<br><br>
 
-<b> all other libraries can be pip installed</b><br>
+<b><i> All other libraries can be pip installed</i></b><br>
 
 <b>For Ubuntu and macOS : </b>
 <br>
