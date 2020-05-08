@@ -16,7 +16,7 @@ alerter.py --shape-predictor shape_predictor_face_landmarks.dat
 
 <i>It would be better if you do all this in a virtual environment.</i><br>
 
-<h2>The dlib library installation in this is the important part</h2><br><b> all other libraries can be pip installed</b><br>
+<h2>The dlib library installation in this is the important part</h2><br>>
 <B>For windows </b><br><br>
 <b><i>Step 1</i></b>: Install Visual Studio 2015 from https://download.microsoft.com/download/5/f/7/5f7acaeb-8363-451f-9425-68a90f98b238/visualcppbuildtools_full.exe<br><br>
 <b><i>Step 2</i></b>: Install CMake v3.8.2 from https://cmake.org/download/<br><br>
