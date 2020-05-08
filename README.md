@@ -13,9 +13,9 @@ alerter.py --shape-predictor shape_predictor_face_landmarks.dat
 <b>4.</b>imutils<br>
 <b>5.</b>dlib<br>
 <b>6.</b>cv2<br>
-<b>7.</b>pygame<br>
+<b>7.</b>pygame<br><br>
 
-it would be better if you do all this in a virtual environment.<br>
+<i>It would be better if you do all this in a virtual environment.</i><br>
 
 The dlib library installation in windows is the important part. all other libraries can be pip installed<br>
 
