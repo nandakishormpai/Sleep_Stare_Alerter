@@ -2,13 +2,14 @@ from scipy.spatial import distance as dist
 from imutils.video import FileVideoStream
 from imutils.video import VideoStream
 from imutils import face_utils
+from ffpyplayer.player import MediaPlayer
+import simpleaudio as sa
 import numpy as np
 import argparse
 import imutils
 import time
 import dlib
 import cv2
-import pygame
 
 def eye_aspect_ratio(eye):
 	# compute the euclidean distances between the two sets of
@@ -37,7 +38,7 @@ args = vars(ap.parse_args())
 # define two constants, one for the eye aspect ratio to indicate
 # blink and then a second constant for the number of consecutive
 # frames the eye must be below the threshold
-EYE_AR_THRESH = 0.25
+EYE_AR_THRESH = 0.27
 EYE_AR_CONSEC_FRAMES = 3
 
 # initialize the frame counters and the total number of blinks
@@ -75,12 +76,13 @@ while True:
 	end=time.time()
 	check=end-start
 	base_check=end-base_start
-	if(base_check>1200):
+	if(base_check>12):
 			file_name = "warning.mp4"
 			window_name = "window"
-			interframe_wait_ms = 30
+			interframe_wait_ms = 23
 
 			cap = cv2.VideoCapture(file_name)
+			player=MediaPlayer(file_name)
 			if not cap.isOpened():
 				print("Error: Could not open video.")
 				exit()
@@ -90,11 +92,15 @@ while True:
 
 			while (True):
 				ret, frame = cap.read()
+				audio_frame,val=player.get_frame()
 				if not ret:
 					print("Reached end of video, exiting.")
 					break
 
 				cv2.imshow(window_name, frame)
+				if val != 'eof' and audio_frame is not None:
+					#audio
+					img, t = audio_frame
 				if cv2.waitKey(interframe_wait_ms) & 0x7F == ord('q'):
 					print("Exit requested.")
 					break
@@ -172,9 +178,9 @@ while True:
 			if(check>9):
 				cv2.putText(frame, "Blink more", (110, 30),
 					cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
-				pygame.init()
-				pygame.mixer.music.load("beep.wav")
-				pygame.mixer.music.play()
+				wave_obj = sa.WaveObject.from_wave_file("beep.wav")
+				play_obj = wave_obj.play()
+				play_obj.wait_done()
 			print("check=",check,"start=",start,"end=",end)
 
 
