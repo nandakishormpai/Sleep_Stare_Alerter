@@ -75,7 +75,7 @@ while True:
 	end=time.time()
 	check=end-start
 	base_check=end-base_start
-	if(base_check>12):
+	if(base_check>1200):
 			file_name = "warning.mp4"
 			window_name = "window"
 			interframe_wait_ms = 30
