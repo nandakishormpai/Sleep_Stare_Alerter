@@ -176,12 +176,12 @@ while True:
 			cv2.putText(frame, "EAR: {:.2f}".format(ear), (300, 30),
 				cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
 			if(check>9 and check<11):
-				cv2.putText(frame, "Blink ", (110, 30),
+				cv2.putText(frame, "Blink ", (150, 30),
 					cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 255), 2)
 				wave_obj = sa.WaveObject.from_wave_file("beep.wav")
 				play_obj = wave_obj.play()
 				play_obj.wait_done()
-			print("check=",check,"start=",start,"end=",end)
+			print("Blink time=",check,"Total time spent=",int(base_check))
 
 
 	
