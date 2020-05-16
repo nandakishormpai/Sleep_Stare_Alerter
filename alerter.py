@@ -38,7 +38,7 @@ args = vars(ap.parse_args())
 # define two constants, one for the eye aspect ratio to indicate
 # blink and then a second constant for the number of consecutive
 # frames the eye must be below the threshold
-EYE_AR_THRESH = 0.22
+EYE_AR_THRESH = 0.23
 EYE_AR_CONSEC_FRAMES = 3
 
 # initialize the frame counters and the total number of blinks
@@ -77,6 +77,8 @@ while True:
 	check=end-start
 	base_check=end-base_start
 	if(base_check>1200):
+			if(check>15):
+				base_start=end
 			file_name = "warning.mp4"
 			window_name = "window"
 			interframe_wait_ms = 23
@@ -175,7 +177,10 @@ while True:
 				cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
 			cv2.putText(frame, "EAR: {:.2f}".format(ear), (300, 30),
 				cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
-			if(check>9 and check<11):
+			if(check>22):
+				base_start=end
+				start=end
+			elif(check>9 and check<11):
 				cv2.putText(frame, "Blink ", (150, 30),
 					cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 255), 2)
 				wave_obj = sa.WaveObject.from_wave_file("beep.wav")
