@@ -74,10 +74,11 @@ end=time.time()
 
 while True:
 	end=time.time()
+	font = cv2.FONT_HERSHEY_SIMPLEX
 	check=end-start
 	base_check=end-base_start
 	if(base_check>1200):
-			file_name = "warning.mp4"
+			file_name = "media/warning.mp4"
 			window_name = "window"
 			interframe_wait_ms = 23
 
@@ -181,10 +182,12 @@ while True:
 			elif(check>9 and check<11):
 				cv2.putText(frame, "Blink ", (150, 30),
 					cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 255), 2)
-				wave_obj = sa.WaveObject.from_wave_file("beep.wav")
+				wave_obj = sa.WaveObject.from_wave_file("media/beep.wav")
 				play_obj = wave_obj.play()
 				play_obj.wait_done()
 			print("Blink time=",check,"Total time spent=",int(base_check))
+			cv2.putText(frame,  "Press Q to quit", (100, 320),font, 1, (0,255, 200), 2, cv2.LINE_AA)
+                        
 
 
 	

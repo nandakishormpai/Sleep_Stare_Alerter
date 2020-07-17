@@ -5,15 +5,6 @@ We used the concept of EAR to do this.
 Clone this repo and execute the python file alerter.py along with command line arguement for --shape-predictor.<br> As ::  
 alerter.py --shape-predictor shape_predictor_face_landmarks.dat
 
-
-<h1>Prerequisites</h1><br>
-<b>1.</b> opencv<br>
-<b>2.</b> numpy<br>
-<b>3.</b> argparse<br>
-<b>4.</b> imutils<br>
-<b>5.</b> dlib<br>
-<b>6.</b> pygame<br><br>
-
 <i>It would be better if you do all this in a virtual environment.</i><br>
 
 <h2>The dlib library installation in this is the important part</h2><br>
