@@ -2,6 +2,8 @@
 An openCV driven project to help users stop staring and sleeping into the screen for too long by alerting them.<br>
 <i> Source: https://www.health.harvard.edu/diseases-and-conditions/electronic-screen-alert-avoid-this-vision-risk</i><br>
 
+Basically, it is not healthy to stare for 7-12 seconds and we should take a break in every 20 minutes. <br>
+
 We used the concept of EAR to do this.<br>
 <i> Source: https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/</i><br>
 
