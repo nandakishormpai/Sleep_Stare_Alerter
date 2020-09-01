@@ -10,16 +10,15 @@ We used the concept of EAR to do this.<br>
 Clone this repo<br>
 <i>It would be better if you do all this in a virtual environment.</i><br>
 
-##Steps: 
+## Steps: 
  ```bash
 python setup.py
 ```
-Note: for Ubuntu and macOS skip Cmake in setup and download Cmake from [here](https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf)
+Note: for Ubuntu and macOS skip Cmake in setup and download Cmake from <i>[here](https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf)</i>
 
-##Step 2: 
- ```bash
+```bash
 python run.py
 ```
-##Thanks for using.
+## Thanks for using.
 
 
