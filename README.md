@@ -4,7 +4,7 @@ An openCV driven project to help users stop staring and sleeping into the screen
 
 Basically, it is not healthy to stare for 7-12 seconds and we should take a break in every 20 minutes. <br>
 
-We used the concept of EAR to do this.<br>
+I used the concept of EAR to do this.<br>
 <i> [Source](https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/)</i>
 
 Clone this repo<br>
