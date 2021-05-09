@@ -7,6 +7,8 @@ Basically, it is not healthy to stare for 7-12 seconds and we should take a brea
 I used the concept of EAR to do this.<br>
 <i> [Source](https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/)</i>
 
+Thanks to [Davisking](https://github.com/davisking)  for Shape Predictor that helps in Detection of Eyes from this [Source](https://github.com/davisking/dlib-models#shape_predictor_68_face_landmarksdatbz2)
+
 Clone this repo<br>
 <i>It would be better if you do all this in a virtual environment.</i><br>
 
